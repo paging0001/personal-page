@@ -15,11 +15,12 @@
                 <h2>Local Page List</h2>
                 <p class="lead">가지고 있는 페이지를 추가해 보세요.</p>
             </div>
-            <div class="list-group">
+
+            <div id="list-row" class="list-group">
                 <form id="sample-row" class="row border p-3 list-group-item">
                     <div class="d-flex">
-                        <input type="text" role="button" class="form-control me-2" disabled>
-                        <button class="btn btn-outline-dark text-nowrap" type="button">
+                        <input id="edit-title" type="text" class="form-control me-2" disabled>
+                        <button id="button-go" class="btn btn-outline-dark text-nowrap" type="button">
                             Go
                             <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor"
                                 class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -30,9 +31,12 @@
                     </div>
 
                     <div class="input-group mt-2">
-                        <input type="text" role="button" class="form-control" disabled>
-                        <span class="input-group-text">5555. 44. 33. 오전 22:11:00</span>
-                        <span role="button" class="input-group-text">
+                        <span class="input-group-text">
+                            <input id="check-edit" class="form-check-input" type="checkbox" role="switch">
+                        </span>
+                        <input id="edit-url" type="text" class="form-control" disabled>
+                        <span id="text-time" class="input-group-text">5555. 44. 33. 오전 22:11:00</span>
+                        <span id="button-delete" role="button" class="input-group-text">
                             <svg xmlns="http://www.w3.org/2000/svg" height="20" fill="currentColor"
                                 class="bi bi-trash" viewBox="0 0 16 16">
                                 <path
@@ -46,7 +50,7 @@
             </div>
 
             <div class="text-center mt-5">
-                <button type="button" role="button" class="btn btn-outline-dark p-3">
+                <button id="button-add" type="button" role="button" class="btn btn-outline-dark p-3">
                     <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor"
                         class="bi bi-bookmark-plus" viewBox="0 0 16 16">
                         <path
