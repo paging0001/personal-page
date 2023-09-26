@@ -65,6 +65,8 @@ class LocalFileSystem {
         try {
             const raw = JSON.parse(localStorage.getItem(LocalFileSystem.KEY));
             this.data = Array.from(raw, (x) => SiteData.import(x));
+            this.data.sort((a, b) => a.time.getTime() - b.time.getTime());
+            console.log(this.data);
         } catch (e) {
             this.data = [];
         }
